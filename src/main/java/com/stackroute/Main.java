@@ -19,7 +19,7 @@ public class Main {
         Movie ismartShankar = context.getBean("ismartShankar",Movie.class);
         ismartShankar.displayActorDetails();
 
-        Movie ismartShankar1 = context.getBean("ismartShankar1",Movie.class);
+        Movie ismartShankar1 = context.getBean("ismartShankar",Movie.class);
         ismartShankar1.displayActorDetails();
 
         System.out.println(ismartShankar == ismartShankar1);

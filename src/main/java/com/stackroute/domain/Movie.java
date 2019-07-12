@@ -1,10 +1,9 @@
 package com.stackroute.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("ismartShankar")
+@Component(value = "ismartShankar")
 public class Movie {
 
     @Autowired
@@ -27,6 +26,5 @@ public class Movie {
     {
         actor.display();
     }
-
 
 }
