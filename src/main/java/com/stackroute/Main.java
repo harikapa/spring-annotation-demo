@@ -9,9 +9,7 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
@@ -20,6 +18,11 @@ public class Main {
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         Movie ismartShankar = context.getBean("ismartShankar",Movie.class);
         ismartShankar.displayActorDetails();
+
+        Movie ismartShankar1 = context.getBean("ismartShankar1",Movie.class);
+        ismartShankar1.displayActorDetails();
+
+        System.out.println(ismartShankar == ismartShankar1);
 
         ((AnnotationConfigApplicationContext) context).close();
 
