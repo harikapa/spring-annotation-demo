@@ -10,6 +10,7 @@ public class SpringConfig {
     @Bean
     public Actor ram()
     {
+
         return new Actor("Ram Pothineni","male",28);
     }
 
