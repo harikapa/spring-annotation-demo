@@ -1,5 +1,6 @@
 package com.stackroute.domain;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import org.springframework.context.annotation.*;
 
 @Configuration
@@ -12,6 +13,12 @@ public class SpringConfig {
     {
 
         return new Actor("Ram Pothineni","male",28);
+    }
+
+    @Bean(initMethod = "customInit", destroyMethod = "customDestroy")
+    public BeanLifecycleDemoBean beanLifecycleDemoBean()
+    {
+        return new BeanLifecycleDemoBean();
     }
 
 //    @Bean
