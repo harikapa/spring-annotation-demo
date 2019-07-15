@@ -1,6 +1,7 @@
 package com.stackroute.domain;
 
 import com.stackroute.demo.BeanLifecycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import org.springframework.context.annotation.*;
 
 @Configuration
@@ -21,19 +22,9 @@ public class SpringConfig {
         return new BeanLifecycleDemoBean();
     }
 
-//    @Bean
-//    @Scope("prototype")
-//    public Movie ismartShankar()
-//    {
-//        return new Movie(ram());
-//    }
-//
-//    @Bean
-//    @Scope("prototype")
-//    public Movie ismartShankar1()
-//    {
-//        return new Movie(ram());
-//    }
-
-
+    @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean()
+    {
+        return new BeanPostProcessorDemoBean();
+    }
 }

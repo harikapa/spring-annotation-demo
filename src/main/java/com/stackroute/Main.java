@@ -19,8 +19,6 @@ public class Main {
 
         System.out.println(ismartShankar == ismartShankar1);
 
-        BeanLifecycleDemoBean beanLifecycleDemoBean = context.getBean("beanLifecycleDemoBean", BeanLifecycleDemoBean.class);
-
         ((AnnotationConfigApplicationContext) context).close();
 
     }
