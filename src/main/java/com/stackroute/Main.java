@@ -17,6 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //initialize Application context with configuration class
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         Movie ismartShankar = context.getBean("ismartShankar",Movie.class);
         ismartShankar.displayActorDetails();
